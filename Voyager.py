@@ -1,3 +1,7 @@
+"""
+En este programa, se encuentran los contextos históricos de las voyagers, las constantes de velocidad, fórmulas de cálculo cinemático cómo las del recorrido
+o del año luz.
+"""
 #Introducción
 print ("""Hola, para explicarte lo que voy a contarte en unos instantes vamos a hacer un pequeño experimento. Estás delante de un balón de futbol y le das una patada, ignorando
  las leyes de atracción, el balón se va a ir alejando rápidamente sin parar. Vamos a comprobarlo, suponiendo que has hecho un buen tiro, la velocidad del balón es de más o menos
@@ -51,6 +55,8 @@ segundos2 = (((años*365)*24)*3600)
 
 recorrido1 = float(recorrido(velocidadV1,segundos))
 recorrido2 = float(recorrido(velocidadV2,segundos))
+añoluz1 = (recorrido1/(300000*3600*365*24))
+añoluz2 = (recorrido2/(300000*3600*365*24))
 print ("En ese periodo de tiempo la voyager1 ha recorrido un total de", (recorrido1/1000), "km y la voyager 2 un total de",(recorrido2/1000), "km divagando por el espacio ")
-print ("Debido a estos números tan grandes, utilizamos otraunidad de medida, el año luz, que es el recorrido que hace la luz en un segundo, que es de unos 300.000 km")
-print ("Haciendo los cálculos la voyager 1 ha recorrido", (recorrido1/(300000*3600*365*24)) , "años luz y la voyager 2" , (recorrido2/(300000*3600*365*24)) , "años luz.")
+print ("Debido a estos números tan grandes, utilizamos otraunidad de medida, el año luz, que es el recorrido que hace la luz en un año, que es de unos 300.000 km")
+print ("Haciendo los cálculos la voyager 1 ha recorrido", (añoluz1) , "años luz y la voyager 2" , (añoluz2) , "años luz.")
