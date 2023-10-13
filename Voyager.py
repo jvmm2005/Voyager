@@ -1,19 +1,36 @@
 #Introducción
 print ("""Hola, para explicarte lo que voy a contarte en unos instantes vamos a hacer un pequeño experimento. Estás delante de un balón de futbol y le das una patada, ignorando
  las leyes de atracción, el balón se va a ir alejando rápidamente sin parar. Vamos a comprobarlo, suponiendo que has hecho un buen tiro, la velocidad del balón es de más o menos
-unos 20m/s, veamos cuanto espacio recorre en el tiempo que tú me digas y un año.""")
-VelocidadB = 20                                     #Velocidad del golpe
-def recorrido(velocidad,tiempo):                    #Definimos una función para calcular el espacio recorrido en un periodo de tiempo general
+unos 20m/s, veamos cuanto espacio recorre en el tiempo que tú me digas y en un año.""")
+
+
+#Velocidad del golpe
+
+VelocidadB = 20
+
+
+#Definimos una función para calcular el espacio recorrido en un periodo de tiempo general
+def recorrido(velocidad,tiempo):
     recorrido = (velocidad*tiempo)
     return recorrido
 tiempo = float(input("El tiempo en días:"))
+
+
+#Creamos variables con la función y con fórmulas físicas
 segundos = (tiempo*24*3600)
 bolea = recorrido(VelocidadB, segundos)
 bolea1 = recorrido(VelocidadB, 31536000)
 print ("La pelota ha recorrido" , (bolea/100) , "km en" , tiempo , "días y" , bolea1 , "km en un año")
-velocidadV1 = 16944.444                             #Velocidades de las Voyager en metros segundo. para que no haya error de cálculo se utiliza el sistema internacional de medidas (S.I.)
+
+
+#Velocidades de las Voyager en metros segundo. para que no haya error de cálculo se utiliza el sistema internacional de medidas (S.I.)
+
+velocidadV1 = 16944.444
 velocidadV2 = 16080.556
+
+
 #Contexto
+
 print ("""¿Sorprendente no? Probablemente haya sido el peor penalti de la historia. Bien, ahora te voy a contar una cosa curiosa. Las Voyager fuéron unos satélites que 
 se lanzaron en 1977 con el objetivo de descubrir nuevas cosas en planetas cómo Júpiter, Saturno y otros que no están en nuestro sistema solar (También tenían unos discos 
 de oro con el título de canciones de la tierra).
@@ -23,9 +40,17 @@ de oro con el título de canciones de la tierra).
 nunca la alcanzará y se encuentra 19,9 miles de millones de kilometros.\n Ahora toca pensar en futuro, tu solo me tienes que decir un tiempo y yo te diré la distancia a la que
  se encontrarán las Voyager. \n LETS GO BACK TO THE FUTURE""")
 años = float(input("El tiempo transcurrido es de (años):"))
-segundos2 = (((años*365)*24)*3600)                   #Conversor de unidades de años a segundos segun S.I.
-recorrido1 = float(recorrido(velocidadV1,segundos))  #Utilizamos la función para obtener el espacio recorrido específico de cada Voyager
+
+
+#Conversor de unidades de años a segundos segun S.I.
+
+segundos2 = (((años*365)*24)*3600)
+
+
+#Utilizamos la función para obtener el espacio recorrido específico de cada Voyager y también lo pasamos a años luz
+
+recorrido1 = float(recorrido(velocidadV1,segundos))
 recorrido2 = float(recorrido(velocidadV2,segundos))
 print ("En ese periodo de tiempo la voyager1 ha recorrido un total de", (recorrido1/1000), "km y la voyager 2 un total de",(recorrido2/1000), "km divagando por el espacio ")
 print ("Debido a estos números tan grandes, utilizamos otraunidad de medida, el año luz, que es el recorrido que hace la luz en un segundo, que es de unos 300.000 km")
-print ("Haciendo los cálculos la voyager 1 ha recorrido", (recorrido1/300000) , "años luz y la voyager 2" , (recorrido2/300000) , "años luz.")
+print ("Haciendo los cálculos la voyager 1 ha recorrido", (recorrido1/(300000*3600*365*24)) , "años luz y la voyager 2" , (recorrido2/(300000*3600*365*24)) , "años luz.")
